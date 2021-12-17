@@ -1,7 +1,7 @@
 import React from 'react';
-import { capitalizeFirstLetter } from '../../utils/helpers';
+//import { capitalizeFirstLetter } from '../../utils/helpers';
 
-function Nav(props) {
+function Navigation(props) {
 
   return (
     <header className="flex-row px-1">
@@ -32,7 +32,7 @@ function Nav(props) {
                   setContactSelected(false);
                 }}
               >
-                {capitalizeFirstLetter(category.name)}
+                {category.name}
               </span>
             </li>
           ))}
@@ -42,4 +42,4 @@ function Nav(props) {
   );
 }
 
-export default Nav;
+export default Navigation;
