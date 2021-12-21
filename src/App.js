@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {React, useState} from 'react'
 import Navigation from './components/Navigation';
@@ -34,7 +33,7 @@ function App() {
         {!contactSelected ? (
           <>
             <About></About>
-            <Project></Project>
+            <Project currentCategory={currentCategory}></Project>
           </>
         ) : (
           <Contact></Contact>

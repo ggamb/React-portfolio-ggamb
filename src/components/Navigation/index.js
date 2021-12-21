@@ -2,12 +2,19 @@ import React from 'react';
 //import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Navigation(props) {
+  const {
+    categories = [],
+    setCurrentCategory,
+    contactSelected,
+    currentCategory,
+    setContactSelected,
+  } = props;
 
   return (
     <header className="flex-row px-1">
       <h2>
         <a data-testid="link" href="/">
-          <span role="img" aria-label="camera"> 📸</span> Oh Snap!
+          <span role="img"> 🤓 </span> ggamb
         </a>
       </h2>
       <nav>
