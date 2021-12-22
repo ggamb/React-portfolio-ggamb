@@ -1,12 +1,13 @@
 import React from 'react';
+import githubImg from './assets/images/github.png'
 
 
 function Footer() {
     return (
         <footer>
-            <nav class="social-nav">
+            <nav>
                 <a href="https://github.com/ggamb" target="_blank">
-                    <img className="social" src="assets/images/github.png" alt="github image"></img>
+                    <img className="social" src=`${githubImg}` alt="github image"></img>
                 </a>
                 <a href="https://www.linkedin.com/in/ggambardella/" target="_blank">
                     <img className="social" src="assets/images/linkedin.png" alt="linkedin image"></img>
