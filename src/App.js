@@ -30,14 +30,7 @@ function App() {
         setContactSelected={setContactSelected}
       ></Navigation>
       <main>
-        {!contactSelected ? (
-          <>
-            <About></About>
-            <Project currentCategory={currentCategory}></Project>
-          </>
-        ) : (
-          <Contact></Contact>
-        )}
+      <About></About>
       </main>
       <Footer></Footer>
     </div>

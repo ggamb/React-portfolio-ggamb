@@ -3,7 +3,7 @@ import React from "react";
 function Header () {
     
     return(
-        console.log('header working')
+        <h1>Test Header</h1>
     )
 }
 
