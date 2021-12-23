@@ -1,10 +1,11 @@
 import './App.css';
 import {React, useState} from 'react'
 import Navigation from './components/Navigation';
-import Project from './components/Project';
+import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import About from './components/About'
+import Resume from './components/Resume';
 
 function App() {
   const [categories] = useState([
@@ -26,7 +27,15 @@ function App() {
         setContactSelected={setContactSelected}
       ></Navigation>
       <main>
-      <About></About>
+        {!contactSelected ? (
+          <>
+          <Resume></Resume>
+          <About></About>
+          </>
+        ) : (
+          <Contact></Contact>
+        )}
+      
       </main>
       <Footer></Footer>
     </div>
