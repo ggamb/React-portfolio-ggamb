@@ -6,6 +6,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import About from './components/About'
 import Resume from './components/Resume';
+import Project from './components/Portfolio';
 
 function App() {
   const [categories] = useState([
@@ -30,6 +31,7 @@ function App() {
         {!contactSelected ? (
           <>
           <Resume></Resume>
+          <Portfolio></Portfolio>
           <About></About>
           </>
         ) : (
