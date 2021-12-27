@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/React-portfolio/static/css/main.97e625f7.css",
+    "main.js": "/React-portfolio/static/js/main.446eb90b.js",
+    "static/js/787.cf250828.chunk.js": "/React-portfolio/static/js/787.cf250828.chunk.js",
+    "static/media/photoPort.png": "/React-portfolio/static/media/photoPort.0352e4e3a5f68305abe0.png",
+    "static/media/beer-belly.png": "/React-portfolio/static/media/beer-belly.e01b4c63396010822c15.png",
+    "static/media/TBD.png": "/React-portfolio/static/media/TBD.38b728aba66ff8954726.png",
+    "static/media/weather.png": "/React-portfolio/static/media/weather.e36b3a2f8de7b60474b7.png",
+    "static/media/my-face.jpg": "/React-portfolio/static/media/my-face.d8f6710f2b38bd881aa1.jpg",
+    "static/media/resumeGambardella.docx": "/React-portfolio/static/media/resumeGambardella.0cb9f6dc2247776ea1f7.docx",
+    "index.html": "/React-portfolio/index.html",
+    "main.97e625f7.css.map": "/React-portfolio/static/css/main.97e625f7.css.map",
+    "main.446eb90b.js.map": "/React-portfolio/static/js/main.446eb90b.js.map",
+    "787.cf250828.chunk.js.map": "/React-portfolio/static/js/787.cf250828.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.97e625f7.css",
+    "static/js/main.446eb90b.js"
+  ]
+}
