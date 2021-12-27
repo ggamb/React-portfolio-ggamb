@@ -24,7 +24,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='flex-wrapper'>
       <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
 
       <div>{renderPage(currentPage)}</div>

@@ -1,5 +1,6 @@
 {
   "name": "react-portfolio",
+  "homepage" : "https://ggamb.github.io/React-portfolio/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -3,8 +3,6 @@ import githubImg from '../../assets/images/github.png';
 import linkedinImg from '../../assets/images/linkedin.png';
 import twitterImg from '../../assets/images/twitter.png';
 
-
-
 function Footer() {
     return (
         <footer>
