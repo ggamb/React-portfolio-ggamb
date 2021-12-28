@@ -3,7 +3,7 @@ import beerBelly from '../../assets/images/beer-belly.png';
 import TBD from '../../assets/images/TBD.png';
 import photoPort from '../../assets/images/photoPort.png';
 import weather from '../../assets/images/weather.png';
-import github from '../../assets/images/github.png'
+import github from '../../assets/images/small-github.png'
 
 function Project() {
     return (

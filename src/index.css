@@ -4,6 +4,7 @@ main {
 	max-width: 90%;
   padding: 50px 30px;
 }
+
 :root {
   --primary: #8c54ff;
   --secondary: #F3A847;
@@ -478,4 +479,9 @@ footer nav {
 
 footer {
   margin-top: auto;
+}
+
+.social {
+  width: 100px;
+  height: 100px;
 }
