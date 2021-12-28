@@ -229,7 +229,7 @@ textarea {
   color: white;
   font-size: 16px;
   padding: 16px 32px;
-  height: 325px;
+  height: fit-content;
   width: 500px;
 }
 
