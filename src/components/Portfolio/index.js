@@ -1,30 +1,32 @@
 import React from 'react';
-import beerBelly from '../../assets/images/beer-belly.png'
-import TBD from '../../assets/images/TBD.png'
-import photoPort from '../../assets/images/photoPort.png'
-import weather from '../../assets/images/weather.png'
+import beerBelly from '../../assets/images/beer-belly.png';
+import TBD from '../../assets/images/TBD.png';
+import photoPort from '../../assets/images/photoPort.png';
+import weather from '../../assets/images/weather.png';
+import github from '../../assets/images/github.png'
 
 function Project() {
     return (
+        <>
+        <h2 className="my-work">My Porfolio</h2>
         <section id="my-work" className="portfolio-holder">
-            <h2 className="my-work">My Porfolio</h2>
             <div className="portfolio-module-holder">
-                <div className="portfolio-module one">
+                <div className="portfolio-module img-animation">
                     <div className="portfolio-title">
-                        <img src={beerBelly} className='left' alt="Find your favorite bars and breweries!"></img>
+                        <img src={beerBelly} className='left' alt="Find your favorite bars and breweries!"/>
                         <div className='portfolio-text'>
                             <h3>Beer Belly Developers</h3>
                             <p>Find your favorite bars and breweries!</p>
                             <p>
                                 <a href="https://github.com/ggamb/Beer-belly-developers-project-2" target="_blank">
-                                    <span className="fa fa-github"></span>
+                                    <img src={github} className='small-github'></img>
                                 </a>
                                 <a href="https://beer-belly.herokuapp.com/" target="_blank">Beer-Belly Developers</a>
                             </p>
                         </div>
                     </div>
                 </div>
-                <div className="portfolio-module two">
+                <div className="portfolio-module img-animation">
                     <div className="portfolio-title">
                         <img src={TBD} className='left' alt="Find your favorite music videos and lyrics!"></img>
                         <div className='portfolio-text'>
@@ -39,7 +41,7 @@ function Project() {
                         </div>
                     </div>
                 </div>
-                <div className="portfolio-module three">
+                <div className="portfolio-module img-animation">
                     <div className="portfolio-title">
                         <img src={photoPort} className='left' alt="An example React portfolio"></img>
                         <div className='portfolio-text'>
@@ -54,7 +56,7 @@ function Project() {
                         </div>
                     </div>
                 </div>
-                <div className="portfolio-module four">
+                <div className="portfolio-module img-animation">
                     <div className="portfolio-title">
                         <img src={weather} className='left' alt="A weather dashboard"></img>
                         <div className='portfolio-text'>
@@ -70,6 +72,7 @@ function Project() {
                 </div>
             </div>
         </section>
+        </>
     );
 }
 
