@@ -8,7 +8,7 @@ import About from './components/About'
 import Resume from './components/Resume';
 
 function App() {
-  const [currentPage, handlePageChange] = useState('About me')
+  const [currentPage, handlePageChange] = useState('About me');
 
   const renderPage = () => {
     switch (currentPage) {
