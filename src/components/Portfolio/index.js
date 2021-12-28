@@ -8,70 +8,52 @@ import github from '../../assets/images/github.png'
 function Project() {
     return (
         <>
-        <h2 className="my-work">My Porfolio</h2>
-        <section id="my-work" className="portfolio-holder">
-            <div className="portfolio-module-holder">
-                <div className="portfolio-module img-animation">
-                    <div className="portfolio-title">
-                        <img src={beerBelly} className='left' alt="Find your favorite bars and breweries!"/>
-                        <div className='portfolio-text'>
-                            <h3>Beer Belly Developers</h3>
-                            <p>Find your favorite bars and breweries!</p>
-                            <p>
-                                <a href="https://github.com/ggamb/Beer-belly-developers-project-2" target="_blank">
-                                    <img src={github} className='small-github'></img>
-                                </a>
-                                <a href="https://beer-belly.herokuapp.com/" target="_blank">Beer-Belly Developers</a>
-                            </p>
+            <h2 className="my-work">My Porfolio</h2>
+            <section id="my-work" className="portfolio-holder">
+                <div className="portfolio-module-holder">
+                    <div className='portfolio-container'>
+                        <img src={beerBelly} className='portfolio-image' />
+                        <div className='middle'>
+                            <div className='portfolio-text'>
+                                <a href='https://github.com/ggamb/Beer-belly-developers-project-2' target="_blank"><img src={github} className='small-Github' /></a>
+                                <a href="https://beer-belly.herokuapp.com/" target="_blank" className='project-link-text'><h3>Beer-Belly Developers</h3></a>
+                                <h4>Come find your favorite breweries and bars!</h4>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="portfolio-module img-animation">
-                    <div className="portfolio-title">
-                        <img src={TBD} className='left' alt="Find your favorite music videos and lyrics!"></img>
-                        <div className='portfolio-text'>
-                            <h3>TunesBeDope</h3>
-                            <p>Find your favorite music videos and lyrics!</p>
-                            <p>
-                                <a href="https://github.com/Xandromus/wander-must" target="_blank">
-                                    <span className="fa fa-github"></span>
-                                </a>
-                                <a href="https://evalecillos.github.io/T-B-D/" target="_blank">TunesBeDope (TBD)</a>
-                            </p>
+                    <div className='portfolio-container'>
+                        <img src={TBD} className='portfolio-image' />
+                        <div className='middle'>
+                            <div className='portfolio-text'>
+                                <a href='https://github.com/ggamb/T-B-D' target="_blank"><img src={github} className='small-Github' /></a>
+                                <a href="https://evalecillos.github.io/T-B-D/" target="_blank" className='project-link-text'><h3>TunesBeDope (TBD)</h3></a>
+                                <h4>Find your favorite videos and lyrics!</h4>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="portfolio-module img-animation">
-                    <div className="portfolio-title">
-                        <img src={photoPort} className='left' alt="An example React portfolio"></img>
-                        <div className='portfolio-text'>
-                            <h3>React Photo Port</h3>
-                            <p>An example portfolio built in React</p>
-                            <p>
-                                <a href="https://github.com/ggamb/photo-port" target="_blank">
-                                    <span className="fa fa-github"></span>
-                                </a>
-                                <a href="https://ggamb.github.io/photo-port/" target="_blank">React Photo Port</a>
-                            </p>
+                    <div className='portfolio-container'>
+                        <img src={photoPort} className='portfolio-image' />
+                        <div className='middle'>
+                            <div className='portfolio-text'>
+                                <a href='https://github.com/ggamb/photo-port' target="_blank"><img src={github} className='small-Github' /></a>
+                                <a href="https://ggamb.github.io/photo-port/" target="_blank" className='project-link-text'><h3>React Photo Port</h3></a>
+                                <h4>An example React photo portfolio</h4>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="portfolio-module img-animation">
-                    <div className="portfolio-title">
-                        <img src={weather} className='left' alt="A weather dashboard"></img>
-                        <div className='portfolio-text'>
-                            <h3>Weather Dashboard</h3>
-                            <p>
-                                <a href="https://github.com/ggamb/weather-dashboard-challenge-6" target="_blank">
-                                    <span className="fa fa-github"></span>
-                                </a>
-                                <a href="https://ggamb.github.io/weather-dashboard-challenge-6/" target="_blank">Weather Dashboard</a>
-                            </p>
+                    <div className='portfolio-container'>
+                        <img src={weather} className='portfolio-image' />
+                        <div className='middle'>
+                            <div className='portfolio-text'>
+                                <a href='https://github.com/ggamb/weather-dashboard-challenge-6' target="_blank"><img src={github} className='small-Github' /></a>
+                                <a href="https://ggamb.github.io/weather-dashboard-challenge-6/" target="_blank" className='project-link-text'><h3>Weather Dashboard</h3></a>
+                                <h4>Search for weather by city</h4>
+                            </div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-        </section>
+            </section>
         </>
     );
 }

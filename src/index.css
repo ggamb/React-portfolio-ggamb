@@ -190,12 +190,55 @@ textarea {
   justify-content: space-between;
 }
 
+.portfolio-container {
+  position: relative;
+  padding: 10px 10px;
+}
+
+.portfolio-image {
+  width: 650px;
+  height: 350px;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.portfolio-container:hover .image {
+  opacity: 0.3;
+}
+
+.portfolio-container:hover .middle {
+  opacity: 1;
+}
+
+.portfolio-text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  height: 325px;
+  width: 500px;
+}
+
 .portfolio-holder {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 25px;
 }
 
 .portfolio-module-holder {
@@ -204,9 +247,12 @@ textarea {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  max-width: 650px;
   margin: 0 auto 15px auto;
   width: 90%;
+}
+
+.project-link-text {
+  color: #000000;
 }
 
 .portfolio-module {
@@ -419,10 +465,8 @@ a {
   color: var(--secondary);
 }
 
-
-
 footer nav {
-  text-align:center;
+  text-align: center;
 }
 
 .flex-wrapper {
