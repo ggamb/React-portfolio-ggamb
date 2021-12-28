@@ -6,6 +6,7 @@ function About() {
     <section className="my-5">
       <h1 id="about">About me</h1>
       <img className = "my-face" src={myFace}></img>
+      <br/>
       <p>
         Financial auditor-turned-web developer interested in pursuing a career in software development.
         I am currently enrolled in The University of Texas at Austin's Coding Bootcamp and will graduate with an understanding of HTML, CSS, JavaScript, Web APIs, Node.js, React, and much more.
