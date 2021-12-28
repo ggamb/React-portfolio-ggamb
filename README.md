@@ -17,6 +17,7 @@ Either use [this](https://ggamb.github.io/React-portfolio/) link or clone the co
 ## Usage
 Simply use [this](https://ggamb.github.io/React-portfolio/) link and you will see something link this: 
 
+![screencapture-localhost-3000-React-portfolio-2021-12-28-11_25_32](https://user-images.githubusercontent.com/86434738/147586509-c2c3c916-8102-4347-82ff-b5a58597bd8e.jpg)
 
 
 ## License
