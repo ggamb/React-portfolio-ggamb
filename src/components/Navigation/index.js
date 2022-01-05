@@ -6,7 +6,7 @@ function Navigation(props) {
   return (
     <header className="flex-row px-1">
       <h2>
-        <a data-testid="link" href="/React-portfolio-ggamb">
+        <a data-testid="link" href="#about">
           <span role="img"> 🤓 </span> ggamb
         </a>
       </h2>
