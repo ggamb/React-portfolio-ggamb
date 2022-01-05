@@ -168,6 +168,11 @@ textarea {
 	padding: 5px;
 }
 
+#about-me-text {
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
 .my-face {
   display: block;
   margin-left: auto;
