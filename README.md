@@ -15,7 +15,7 @@ I built this React portfolio entirely from scratch to show off some of my web de
 Either use [this](https://ggamb.github.io/React-portfolio/) link or clone the code to your machine, navigate to the root directory in your favorite IDE, run `npm i` to install dependencies, and then run `npm start` to automatically bring up my portfolio in your browser.
 
 ## Usage
-Simply use [this](https://ggamb.github.io/React-portfolio/) link and you will see something link this: 
+Simply use [this](ggamb.github.io/react-portfolio-ggamb/) link and you will see something link this: 
 
 ![screencapture-localhost-3000-React-portfolio-2021-12-28-11_25_32](https://user-images.githubusercontent.com/86434738/147586509-c2c3c916-8102-4347-82ff-b5a58597bd8e.jpg)
 
