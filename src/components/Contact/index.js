@@ -9,10 +9,16 @@ function Contact() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log("we are here")
         if (!errorMessage) {
             setFormState({ [e.target.name]: e.target.value });
-            console.log('Form', formState);
         }
+
+        setFormState({
+            name: '',
+            email: '',
+            message: '',
+        })
     };
 
     const handleChange = (e) => {
