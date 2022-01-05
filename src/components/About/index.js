@@ -3,8 +3,10 @@ import myFace from '../../assets/images/my-face.jpg'
 
 function About() {
   return (
+    <>
+    <h1 id="about">About me</h1>
     <section className="my-5">
-      <h1 id="about">About me</h1>
+      
       <img className = "my-face" src={myFace}></img>
       <br/>
       <p id='about-me-text'>
@@ -15,6 +17,7 @@ function About() {
 
       
     </section>
+    </>
   );
 }
 

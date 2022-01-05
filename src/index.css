@@ -329,7 +329,7 @@ textarea {
   height: 183px;
 }
 
-#contact-me {
+.center-info {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -496,4 +496,11 @@ footer {
 .social {
   width: 100px;
   height: 100px;
+}
+
+@media screen and (max-width: 1556px) {
+  .portfolio-holder{
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 }
