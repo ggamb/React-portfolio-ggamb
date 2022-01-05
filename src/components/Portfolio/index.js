@@ -8,7 +8,7 @@ import github from '../../assets/images/Octocat.png'
 function Project() {
     return (
         <>
-            <h2 className="my-work">My Porfolio</h2>
+            <h2 className="my-work">My Portfolio</h2>
             <section id="my-work" className="portfolio-holder">
                 <div className="portfolio-module-holder">
                     <div className='portfolio-container'>
