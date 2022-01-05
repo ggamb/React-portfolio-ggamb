@@ -1,5 +1,4 @@
 import React from 'react';
-//import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Navigation(props) {
   const tabs = ['About me', 'Contact', 'Portfolio', 'Resume'];
@@ -7,7 +6,7 @@ function Navigation(props) {
   return (
     <header className="flex-row px-1">
       <h2>
-        <a data-testid="link" href="/">
+        <a data-testid="link" href="">
           <span role="img"> 🤓 </span> ggamb
         </a>
       </h2>
