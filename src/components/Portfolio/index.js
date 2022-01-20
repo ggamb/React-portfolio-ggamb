@@ -3,7 +3,8 @@ import beerBelly from '../../assets/images/beer-belly.png';
 import TBD from '../../assets/images/TBD.png';
 import photoPort from '../../assets/images/photoPort.png';
 import weather from '../../assets/images/weather.png';
-import github from '../../assets/images/Octocat.png'
+import github from '../../assets/images/Octocat.png';
+import getFed from '../../assets/images/getFed.jpg'
 
 function Project() {
     return (
@@ -11,6 +12,16 @@ function Project() {
             <h2 className="my-work">My Portfolio</h2>
             <section id="my-work" className="portfolio-holder">
                 <div className="portfolio-module-holder">
+                    <div className='portfolio-container'>
+                        <img src={getFed} className='portfolio-image' />
+                        <div className='middle'>
+                            <div className='portfolio-text'>
+                                <a href='https://github.com/ggamb/team-cuisine-project-3' target="_blank"><img src={github} className='small-Github' /></a>
+                                <a href="https://get-fed-project.herokuapp.com/" target="_blank" className='project-link-text'><h3>Get Fed</h3></a>
+                                <h4>An Uber Eats clone to find food near you!</h4>
+                            </div>
+                        </div>
+                    </div>
                     <div className='portfolio-container'>
                         <img src={beerBelly} className='portfolio-image' />
                         <div className='middle'>
