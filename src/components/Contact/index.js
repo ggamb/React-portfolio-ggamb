@@ -1,68 +1,99 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
+import { send } from 'emailjs-com';
+import { Typography } from '@mui/material';
 
 function Contact() {
-    const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+    const serviceID = 'service_dqwrsly';
+    const templateID = 'template_2kmd407';
+    const userID = 'user_zp4X6Lct2JtUs0hJgaU48';
 
     const [errorMessage, setErrorMessage] = useState('');
-    const { name, email, message } = formState;
 
-    const handleSubmit = (e) => {
+    const [toSend, setToSend] = useState({
+        from_name: '',
+        message: '',
+        reply_to: '',
+    });
+
+    const onSubmit = (e) => {
         e.preventDefault();
-        console.log("we are here")
-        if (!errorMessage) {
-            setFormState({ [e.target.name]: e.target.value });
-        }
+        send(
+            serviceID,
+            templateID,
+            toSend,
+            userID
+        )
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                setToSend({
+                    from_name: "",
+                    message: "",
+                    reply_to: ""
+                })
 
-        setFormState({
-            name: '',
-            email: '',
-            message: '',
-        })
+                alert("Email sent successfully!")
+            })
+            .catch((err) => {
+                console.log('FAILED...', err);
+            });
     };
 
     const handleChange = (e) => {
-        if (e.target.name === 'email') {
-            const isValid = validateEmail(e.target.value);
-            if (!isValid) {
-                setErrorMessage('Your email is invalid.');
-            } else {
-                setErrorMessage('');
-            }
-        } else {
-            if (!e.target.value.length) {
-                setErrorMessage(`${e.target.name} is required.`);
-            } else {
-                setErrorMessage('');
-            }
-        }
+        setToSend({ ...toSend, [e.target.name]: e.target.value });
     };
 
     return (
         <>
-        <h1 data-testid="h1tag" >Contact me</h1>
-        <section className='center-info'>
-            <form id="contact-form" onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="name">Name: </label>
-                    <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
-                </div>
-                <div>
-                    <label htmlFor="email">Email address:</label>
-                    <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
-                </div>
-                <div>
-                    <label htmlFor="message">Message:</label>
-                    <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
-                </div>
-                {errorMessage && (
+
+            <h1 data-testid="h1tag" >Contact me</h1>
+            <br></br>
+            <Typography variant='h4' style={{ textAlign: 'left' }}>
+                Use this form below or email me directly at:<br></br>
+                <a href='mailto: glenngambardella372@gmail.com'>glenngambardella372@gmail.com</a>
+            </Typography>
+
+            <section className='center-info'>
+                <form id="contact-form" onSubmit={onSubmit}>
                     <div>
-                        <p className="error-text">{errorMessage}</p>
+                        <label htmlFor="from_name">Name: </label>
+                        <input
+                            type='text'
+                            name='from_name'
+                            placeholder='Your name'
+                            value={toSend.from_name}
+                            onChange={handleChange}
+                        />
                     </div>
-                )}
-                <button data-testid="button" type="submit">Submit</button>
-            </form>
-        </section>
+                    <div>
+                        <label htmlFor="message">Message: </label>
+                        <textarea
+                            type='text'
+                            rows={5}
+                            name='message'
+                            placeholder='Your message'
+                            value={toSend.message}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="reply_to">Your email: </label>
+                        <input
+                            type='text'
+                            name='reply_to'
+                            placeholder='Your email'
+                            value={toSend.reply_to}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    {errorMessage && (
+                        <div>
+                            <p className="error-text">{errorMessage}</p>
+                        </div>
+                    )}
+                    <button type='submit'>Submit</button>
+                </form>
+            </section>
         </>
     );
 }
