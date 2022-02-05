@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-portfolio-ggamb/static/css/main.5c965ec7.css",
-    "main.js": "/React-portfolio-ggamb/static/js/main.09608016.js",
+    "main.js": "/React-portfolio-ggamb/static/js/main.92c744d4.js",
     "static/js/787.cf250828.chunk.js": "/React-portfolio-ggamb/static/js/787.cf250828.chunk.js",
     "static/media/photoPort.png": "/React-portfolio-ggamb/static/media/photoPort.0352e4e3a5f68305abe0.png",
     "static/media/beer-belly.png": "/React-portfolio-ggamb/static/media/beer-belly.e01b4c63396010822c15.png",
@@ -10,14 +10,14 @@
     "static/media/weather.png": "/React-portfolio-ggamb/static/media/weather.e36b3a2f8de7b60474b7.png",
     "static/media/my-face.jpg": "/React-portfolio-ggamb/static/media/my-face.d8f6710f2b38bd881aa1.jpg",
     "static/media/Octocat.png": "/React-portfolio-ggamb/static/media/Octocat.4a62f51f8163ab8dd24a.png",
-    "static/media/resumeGambardella.docx": "/React-portfolio-ggamb/static/media/resumeGambardella.fc8e612e84185bd0dce0.docx",
+    "static/media/resumeGambardella.docx": "/React-portfolio-ggamb/static/media/resumeGambardella.c6f7ca3bad64545e8ee2.docx",
     "index.html": "/React-portfolio-ggamb/index.html",
     "main.5c965ec7.css.map": "/React-portfolio-ggamb/static/css/main.5c965ec7.css.map",
-    "main.09608016.js.map": "/React-portfolio-ggamb/static/js/main.09608016.js.map",
+    "main.92c744d4.js.map": "/React-portfolio-ggamb/static/js/main.92c744d4.js.map",
     "787.cf250828.chunk.js.map": "/React-portfolio-ggamb/static/js/787.cf250828.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5c965ec7.css",
-    "static/js/main.09608016.js"
+    "static/js/main.92c744d4.js"
   ]
 }
