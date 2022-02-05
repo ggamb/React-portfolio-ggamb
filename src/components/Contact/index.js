@@ -57,6 +57,7 @@ function Contact() {
                 <form id="contact-form" onSubmit={onSubmit}>
                     <div>
                         <label htmlFor="from_name">Name: </label>
+                        <br></br>
                         <input
                             type='text'
                             name='from_name'
@@ -86,11 +87,7 @@ function Contact() {
                             onChange={handleChange}
                         />
                     </div>
-                    {errorMessage && (
-                        <div>
-                            <p className="error-text">{errorMessage}</p>
-                        </div>
-                    )}
+                    <br></br>
                     <button type='submit'>Submit</button>
                 </form>
             </section>
