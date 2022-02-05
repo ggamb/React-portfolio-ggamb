@@ -11,13 +11,12 @@ function Resume() {
             <h3>Proficient Technologies:</h3>
             <ol>
                 <li>React (this portfolio!)</li>
-                <li>Javascript, jQuery, Node.js, Express.js</li>
-                <li>State</li>
+                <li>JavaScript, jQuery, Node.js, Express.js, Jest testing framework</li>
                 <li>HTML5, CSS3</li>
+                <li>State (React Context API, Redux) </li>
                 <li>GraphQL</li>
                 <li>Bootstrap API</li>
                 <li>Mongoose, MongoDB</li>
-                <li>Jest testing framework</li>
                 <li>Progressive Web Applications (PWAs), webpack, service workers</li>
                 <li>...And always learning more!</li>
             </ol>
