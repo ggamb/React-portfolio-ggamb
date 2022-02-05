@@ -6,7 +6,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import About from './components/About'
 import Resume from './components/Resume';
-import { CssBaseline } from '@mui/material';
+//import { CssBaseline } from '@mui/material';
 
 
 function App() {
@@ -26,14 +26,14 @@ function App() {
   }
 
   return (
-    <CssBaseline>
+
       <div className='flex-wrapper'>
         <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
 
         <div>{renderPage(currentPage)}</div>
         <Footer></Footer>
       </div>
-    </CssBaseline>
+ 
   );
 }
 

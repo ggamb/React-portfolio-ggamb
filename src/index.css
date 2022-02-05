@@ -16,6 +16,7 @@ main {
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
   --spacing-five: calc(2.5rem);
+  --background: #F2F4CB;
 }
 
 * {
@@ -24,7 +25,7 @@ main {
 
 html {
   min-height: 100%;
-  background: var(--dark);
+  background: var(--background);
   background-size: cover;
 }
 
@@ -49,6 +50,7 @@ h6 {
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
+  color: var(--dark);
 }
 
 h1 {
@@ -172,6 +174,7 @@ textarea {
   margin-right: 20%;
   margin-left: 20%;
   text-align: left;
+  color: var(--dark);
 }
 
 .my-face {
@@ -415,6 +418,10 @@ img.portrait {
   padding-bottom: var(--spacing-two);
 }
 
+ol li {
+  color: var(--dark);
+}
+
 .card {
   width: 25%;
   text-align: center;
@@ -427,7 +434,9 @@ img.portrait {
   cursor: pointer;
 }
 
-
+form div label {
+  color: black;
+}
 
 button {
 	background: var(--primary);
