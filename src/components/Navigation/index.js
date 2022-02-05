@@ -7,7 +7,7 @@ function Navigation(props) {
     <header className="flex-row px-1">
       <h2>
         <a data-testid="link" href="/React-portfolio-ggamb">
-          <span role="img"> 🤓 </span> ggamb
+          <span role="img"> ggamb </span> 
         </a>
       </h2>
       <nav className='header-nav'>
