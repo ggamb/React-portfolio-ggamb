@@ -9,7 +9,7 @@ import getFed from '../../assets/images/getFed.jpg'
 function Project() {
     return (
         <>
-            <h2 className="my-work">My Portfolio</h2>
+            <h2 className="my-work tab-text">My Portfolio</h2>
             <section id="my-work" className="portfolio-holder">
                 <div className="portfolio-module-holder">
                     <div className='portfolio-container'>

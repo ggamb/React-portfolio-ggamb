@@ -8,12 +8,13 @@ function About() {
 
   const useStyles = makeStyles(theme => ({
     title: {
-      color: '#2a628f',
-
+      color: 'black',
+      fontWeight: 'bolder'
     },
     subtitle: {
-      color: '#3e92cc',
+      color: 'black',
       marginBottom: '3rem',
+      fontWeight: 'light'
     },
     typedContainer: {
       position: 'absolute',
@@ -31,7 +32,7 @@ function About() {
 
   return (
     <>
-      <h1 id="about">About me</h1>
+      <h1 id="about" className='tab-text'>About me</h1>
       <section>
         <div className={classes.typedContainer}>
           <img className="my-face" src={myFace}></img>

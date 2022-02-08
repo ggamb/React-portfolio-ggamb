@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
 import { send } from 'emailjs-com';
 import { Typography } from '@mui/material';
@@ -9,6 +9,8 @@ function Contact() {
     const userID = 'user_zp4X6Lct2JtUs0hJgaU48';
 
     const [errorMessage, setErrorMessage] = useState('');
+
+    const [messageSent, setMessageSent] = useState(false);
 
     const [toSend, setToSend] = useState({
         from_name: '',
@@ -25,20 +27,22 @@ function Contact() {
             userID
         )
             .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
+                
                 setToSend({
                     from_name: "",
                     message: "",
                     reply_to: ""
                 })
 
-                alert("Email sent successfully!")
+                alert("Email sent successfully!");
+                setMessageSent(true);
             })
             .catch((err) => {
                 console.log('FAILED...', err);
             });
     };
 
+    
     const handleChange = (e) => {
         setToSend({ ...toSend, [e.target.name]: e.target.value });
     };
@@ -46,7 +50,7 @@ function Contact() {
     return (
         <>
 
-            <h1 data-testid="h1tag" >Contact me</h1>
+            <h1 data-testid="h1tag" className='tab-text'>Contact me</h1>
             <br></br>
             <Typography variant='h4' style={{ textAlign: 'left' }}>
                 Use this form below or email me directly at:<br></br>
@@ -90,6 +94,12 @@ function Contact() {
                     <br></br>
                     <button type='submit'>Submit</button>
                 </form>
+
+                {messageSent && (
+                        <div>
+                           <span className='check-img' role='check-img'>✅</span><p className='success-text'>Message sent successfully! I will reach out to you shortly!</p>
+                        </div>
+                    )}
             </section>
         </>
     );
