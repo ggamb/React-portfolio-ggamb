@@ -12,6 +12,7 @@ main {
   --light: #fafafa;
   --dark: #000000;
   --darker: #111111;
+  --success: green;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
@@ -179,8 +180,12 @@ textarea {
   float: left;
 }
 
-.success-text {
-  color: var(--dark);
+.success-text{
+  color: var(--success);
+}
+
+.error-text {
+  color: var(--error);
 }
 
 #about-me-text {
@@ -205,6 +210,10 @@ textarea {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.contact-form {
+  width: fit-content;
 }
 
 .flex-row {
@@ -350,10 +359,19 @@ textarea {
 }
 
 .center-info {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: table;
+  margin: 0 auto;
+  resize: none;
+}
+
+.input-style {
+  border: #000000 solid 2px;
+}
+
+.message-box {
+  resize: vertical;
+  overflow: auto;
+  border: #000000 solid 2px;
 }
 
 img.left {
