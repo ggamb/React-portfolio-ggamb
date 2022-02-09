@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
 import { send } from 'emailjs-com';
-import { Typography } from '@mui/material';
+import { Icon, Typography } from '@mui/material';
+import DangerousIcon from '@mui/icons-material/Dangerous';
 
 function Contact() {
     const serviceID = 'service_dqwrsly';
     const templateID = 'template_2kmd407';
     const userID = 'user_zp4X6Lct2JtUs0hJgaU48';
 
-    const [errorMessageEmail, setErrorMessageEmail] = useState('');
-
     const [messageSent, setMessageSent] = useState(false);
 
+    //Controls error messages and icons for name, email, textarea
+    const [errorMessageEmail, setErrorMessageEmail] = useState('');
     const [errorMessageName, setErrorMessageName] = useState('');
-
     const [errorMessageText, setErrorMessageText] = useState('');
+    const [failedEmail, setFailedEmail] = useState('');
 
+    //For emailjs
     const [toSend, setToSend] = useState({
         from_name: '',
         message: '',
@@ -25,26 +27,39 @@ function Contact() {
     const onSubmit = (e) => {
         e.preventDefault();
 
-        send(
-            serviceID,
-            templateID,
-            toSend,
-            userID
-        )
-            .then((response) => {
-                //Sends email via emailjs
-                setToSend({
-                    from_name: "",
-                    message: "",
-                    reply_to: ""
-                })
+        setErrorMessageEmail('');
+        setErrorMessageName('');
+        setErrorMessageText('');
 
-                //Sets messageSent to true to display text
-                setMessageSent(true);
-            })
-            .catch((err) => {
-                console.log('FAILED...', err);
-            });
+        const nameText = e.target[0].value;
+        const emailText = e.target[1].value;
+        const messageText = e.target[2].value;
+
+        if (nameText && emailText && messageText) {
+            send(
+                serviceID,
+                templateID,
+                toSend,
+                userID
+            )
+                .then((response) => {
+                    //Sends email via emailjs
+                    setToSend({
+                        from_name: "",
+                        message: "",
+                        reply_to: ""
+                    })
+
+                    //Sets messageSent to true to display text
+                    setFailedEmail(false);
+                    setMessageSent(true);
+                })
+                .catch((err) => {
+                    setFailedEmail('Something went wrong. Did you enter all your info?')
+                });
+        } else {
+            setFailedEmail('Something went wrong. Did you enter all your info?')
+        }
     };
 
 
@@ -53,6 +68,8 @@ function Contact() {
     };
 
     const handleBlur = (e) => {
+        setFailedEmail(false);
+
         //Handles email blur
         if (e.target.name === 'reply_to' || e.target.length < 1) {
             const isValid = validateEmail(e.target.value);
@@ -75,9 +92,9 @@ function Contact() {
         //Handles message blur
         if (e.target.name === 'message') {
             if (e.target.value.length < 1) {
-                setErrorMessageName('Send me something, anything!');
+                setErrorMessageText('Send me something, anything!');
             } else {
-                setErrorMessageName('');
+                setErrorMessageText('');
             }
 
 
@@ -108,6 +125,13 @@ function Contact() {
                             onBlur={handleBlur}
                             className='input-style'
                         />
+                        {errorMessageName && (
+                            <span>
+                                <Icon>
+                                    <DangerousIcon sx={{ color: 'var(--error)' }} />
+                                </Icon>
+                            </span>
+                        )}
                     </div>
                     <div>
                         <label htmlFor="reply_to">Email: </label><br />
@@ -120,6 +144,13 @@ function Contact() {
                             className='input-style'
                             onBlur={handleBlur}
                         />
+                        {errorMessageEmail && (
+                            <span>
+                                <Icon>
+                                    <DangerousIcon sx={{ color: 'var(--error)' }} />
+                                </Icon>
+                            </span>
+                        )}
                     </div>
                     <div>
                         <label htmlFor="message">Message: </label><br />
@@ -132,6 +163,13 @@ function Contact() {
                             onBlur={handleBlur}
                             className='message-box'
                         />
+                        {errorMessageText && (
+                            <span>
+                                <Icon>
+                                    <DangerousIcon sx={{ color: 'var(--error)' }} />
+                                </Icon>
+                            </span>
+                        )}
                     </div>
                     <br></br>
                     <button type='submit'>Submit</button>
@@ -152,6 +190,12 @@ function Contact() {
                 {errorMessageText && (
                     <div>
                         <p className="error-text">{errorMessageText}</p>
+                    </div>
+                )}
+
+                {failedEmail && (
+                    <div>
+                        <p className="error-text">{failedEmail}</p>
                     </div>
                 )}
 
