@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
 import { send } from 'emailjs-com';
-import { Icon, Typography } from '@mui/material';
+import { Icon, Typography, Button } from '@mui/material';
 import DangerousIcon from '@mui/icons-material/Dangerous';
+import { styled } from '@mui/styles';
 
 function Contact() {
     const serviceID = 'service_dqwrsly';
@@ -16,6 +17,18 @@ function Contact() {
     const [errorMessageName, setErrorMessageName] = useState('');
     const [errorMessageText, setErrorMessageText] = useState('');
     const [failedEmail, setFailedEmail] = useState('');
+
+    //Styles button
+    const MyButton = styled(Button)({
+        background: 'black',
+        border: 0,
+        borderRadius: 3,
+        color: 'white',
+        height: 48,
+        padding: '0 30px',
+    });
+
+
 
     //For emailjs
     const [toSend, setToSend] = useState({
@@ -58,7 +71,8 @@ function Contact() {
                     setFailedEmail('Something went wrong. Did you enter all your info?')
                 });
         } else {
-            setFailedEmail('Something went wrong. Did you enter all your info?')
+            setMessageSent(false);
+            setFailedEmail('Something went wrong. Did you enter all your info?');
         }
     };
 
@@ -103,7 +117,6 @@ function Contact() {
 
     return (
         <>
-
             <h1 data-testid="h1tag" className='tab-text'>Contact me</h1>
             <br></br>
             <Typography variant='h5' style={{ textAlign: 'left', paddingBottom: '10px' }}>
@@ -172,7 +185,13 @@ function Contact() {
                         )}
                     </div>
                     <br></br>
-                    <button type='submit'>Submit</button>
+
+                    {errorMessageEmail || errorMessageName || errorMessageText ? (
+                        <MyButton disabled type='submit'>Submit</MyButton>
+                    ) : (
+                        <MyButton type='submit'>Submit</MyButton>
+                    )}
+
                 </form>
 
                 {errorMessageEmail && (
