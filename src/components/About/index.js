@@ -35,7 +35,7 @@ function About() {
       <h1 id="about" className='tab-text'>About me</h1>
       <section>
         <div className={classes.typedContainer}>
-          <img className="my-face" src={myFace}></img>
+          <img className="my-face" src={myFace} alt='a picture of my face'></img>
           <h2 className={classes.title}>Glenn Gambardella</h2>
 
           <Typography className={classes.subtitle} variant='h4'>
